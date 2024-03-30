@@ -1,5 +1,5 @@
-class DynamicArray {
-
+package dynamicarrays;
+public class DynamicArray {
     private int[] arr;
     private int capacity;
     private int length;

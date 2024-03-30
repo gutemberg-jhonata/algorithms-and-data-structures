@@ -1,3 +1,5 @@
+package staticarrays;
+
 public class StaticArray<T> {
     private final Object[] arr;
     private final int capacity;
