@@ -33,13 +33,16 @@ public class StaticArrayImpl2<T> implements StaticArray<T> {
         length++;
     }
 
-    public void remove() {
+    @SuppressWarnings("unchecked")
+    public T remove() throws Exception {
         if (length > 0) {
-            length--;
+            return (T) arr[--length];
         }
+        throw new Exception("Array is empty.");
     }
 
-    public void remove(final int index) throws Exception {
+    @SuppressWarnings("unchecked")
+    public T remove(final int index) throws Exception {
         if (index < 0 || index > length - 1) {
             throw new Exception("Index out of bounds.");
         }
@@ -47,8 +50,9 @@ public class StaticArrayImpl2<T> implements StaticArray<T> {
             arr[i - 1] = arr[i];
         }
         if (length > 0) {
-            length--;
+            return (T) arr[--length];
         }
+        throw new Exception("Array is empty.");
     }
 
     public void print() {
@@ -60,5 +64,22 @@ public class StaticArrayImpl2<T> implements StaticArray<T> {
 
     public int length() {
         return this.length;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public T get(final int index) throws Exception {
+        if (index < 0 || index > length - 1) {
+            throw new Exception("Index out of bounds.");
+        }
+        return (T) arr[index];
+    }
+
+    @Override
+    public void set(final int index, final T val) throws Exception {
+        if (index < 0 || index > length - 1) {
+            throw new Exception("Index out of bounds.");
+        }
+        arr[index] = val;    
     }
 }

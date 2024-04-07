@@ -1,8 +1,6 @@
 package staticarrays.impl;
 
-import staticarrays.StaticArray;
-
-public class StaticArrayImpl<T> implements StaticArray<T> {
+public class StaticArrayImpl<T> {
     private final Object[] arr;
     private final int capacity;
     private int length = 0;

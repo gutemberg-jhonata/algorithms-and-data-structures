@@ -1,12 +1,12 @@
 package stack;
 
-import dynamicarrays.DynamicArray;
+import dynamicarrays.impl.DynamicArrayImpl;
 
 public class Stack {
-    private final DynamicArray stack;
+    private final DynamicArrayImpl stack;
 
     public Stack() {
-        stack =  new DynamicArray(5);
+        stack =  new DynamicArrayImpl(5);
     }
     
     public void push(int n) {
