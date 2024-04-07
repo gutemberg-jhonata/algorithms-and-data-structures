@@ -2,7 +2,7 @@ package staticarrays;
 
 public class Main {
     public static void main(String ...args) throws Exception {
-        var arr = new StaticArray<Integer>(8);
+        StaticArray<Integer> arr = new StaticArrayImpl2<>(8);
         arr.insert(10);
         arr.insert(20);
         arr.insert(30);
@@ -14,9 +14,9 @@ public class Main {
         arr.print();
         arr.insert(35, 4);
         arr.print();
-        arr.delete(3);
-        arr.delete(6);
-        arr.delete(0);
+        arr.remove(3);
+        arr.remove(6);
+        arr.remove(0);
         arr.print();
     }
 }
