@@ -1,4 +1,6 @@
-package staticarrays;
+package staticarrays.impl;
+
+import staticarrays.StaticArray;
 
 public class StaticArrayImpl2<T> implements StaticArray<T> {
     private int capacity;

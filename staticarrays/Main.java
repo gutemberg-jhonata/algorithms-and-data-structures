@@ -1,5 +1,7 @@
 package staticarrays;
 
+import staticarrays.impl.StaticArrayImpl2;
+
 public class Main {
     public static void main(String ...args) throws Exception {
         StaticArray<Integer> arr = new StaticArrayImpl2<>(8);

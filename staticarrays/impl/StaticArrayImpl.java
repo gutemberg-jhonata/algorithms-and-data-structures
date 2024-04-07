@@ -1,4 +1,6 @@
-package staticarrays;
+package staticarrays.impl;
+
+import staticarrays.StaticArray;
 
 public class StaticArrayImpl<T> implements StaticArray<T> {
     private final Object[] arr;
