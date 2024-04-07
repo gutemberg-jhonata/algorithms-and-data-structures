@@ -1,8 +1,10 @@
 package stack;
 
+import stack.impl.StackImpl2;
+
 public class Main {
-    public static void main(String[] args) {
-        var stack = new Stack();
+    public static void main(String[] args) throws Exception {
+        Stack<Integer> stack = new StackImpl2<>();
         stack.push(1);
         System.out.println(stack.peek());
         stack.push(2);
