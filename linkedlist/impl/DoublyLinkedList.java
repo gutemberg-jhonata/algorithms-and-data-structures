@@ -111,7 +111,7 @@ public class DoublyLinkedList<T> implements LinkedList<T>{
 
     @Override
     public T remove(int index) throws Exception {
-        if (index < 0 || index > length) {
+        if (index < 0 || index > length - 1) {
             throw new Exception("Index out of bounds.");
         }
         int i = 0;
