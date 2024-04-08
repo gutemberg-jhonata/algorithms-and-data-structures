@@ -1,10 +1,10 @@
 package linkedlist;
 
-import linkedlist.impl.SinglyLinkedList2;
+import linkedlist.impl.DoublyLinkedList;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        LinkedList<Integer> list = new SinglyLinkedList2<>();
+        LinkedList<Integer> list = new DoublyLinkedList<>();
         list.insert(10);
         list.insert(20);
         list.insert(30);
@@ -14,6 +14,10 @@ public class Main {
         list.insert(25, 2);
         list.print();
         list.insert(35, 4);
+        list.print();
+        /*list.remove();
+        list.remove();
+        list.remove();*/
         list.print();
         list.remove(3);
         list.print();
