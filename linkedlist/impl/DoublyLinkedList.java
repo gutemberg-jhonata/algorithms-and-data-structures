@@ -67,7 +67,7 @@ public class DoublyLinkedList<T> implements LinkedList<T>{
     }
 
     @Override
-    public void insert(T val) throws Exception {
+    public void insert(T val) {
         var newNode = new ListNode(val);
         newNode.prev = tail.prev;
         newNode.next = tail;

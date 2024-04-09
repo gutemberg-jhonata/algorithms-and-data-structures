@@ -63,7 +63,7 @@ public class SinglyLinkedList2<T> implements LinkedList<T> {
     }
 
     @Override
-    public void insert(T val) throws Exception {
+    public void insert(T val) {
         tail.next = new ListNode(val);
         tail = tail.next;
         length++;
@@ -122,6 +122,8 @@ public class SinglyLinkedList2<T> implements LinkedList<T> {
         curr.next = curr.next.next;
         if (curr.next == null) {
             tail = curr;
+            length--;
+            return tail.val;
         }
         length--;
         return curr.next.val;
