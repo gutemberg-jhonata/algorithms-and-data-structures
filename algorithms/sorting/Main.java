@@ -3,11 +3,11 @@ package algorithms.sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-import algorithms.sorting.impl.InsertionSort;
+import algorithms.sorting.impl.MergeSort;
 
 public class Main {
     public static void main(String[] args) {
-        ListSorter<Integer> arraySorter = new InsertionSort<>();
+        ListSorter<Integer> arraySorter = new MergeSort<>();
         List<Integer> array = new ArrayList<>();
         array.add(10);
         array.add(40);
