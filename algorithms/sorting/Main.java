@@ -3,11 +3,12 @@ package algorithms.sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-import algorithms.sorting.impl.QuickSort;
+import algorithms.sorting.impl.BucketSort;
 
 public class Main {
     public static void main(String[] args) {
-        ListSorter<Integer> arraySorter = new QuickSort<>();
+        //ListSorter<Integer> arraySorter = new QuickSort<>();
+        BucketSort arraySorter = new BucketSort();
         List<Integer> array = new ArrayList<>();
         array.add(10);
         array.add(40);
