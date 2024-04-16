@@ -20,7 +20,7 @@ public class BinarySearchTree {
     }
 
     public void insert(int val) {
-        insert(root, val);
+        root = insert(root, val);
     }
 
     public TreeNode minValueNode() {
@@ -35,6 +35,26 @@ public class BinarySearchTree {
         return remove(root, val);
     }
 
+    public void printInorder() {
+        printInorder(root);
+        System.out.println();
+    }
+
+    public void printReverseInorder() {
+        printReverseInorder(root);
+        System.out.println();
+    }
+
+    public void printPreorder() {
+        printPreorder(root);
+        System.out.println();
+    }
+
+    public void printPosorder() {
+        printPosorder(root);
+        System.out.println();
+    }
+
     private boolean search(TreeNode root, int target) {
         if (root == null) {
             return false;
@@ -43,9 +63,8 @@ public class BinarySearchTree {
             return search(root.right, target);
         } else if (target < root.val) {
             return search(root.left, target);
-        } else {
-            return true;
         }
+        return true;
     }
 
     private TreeNode insert(TreeNode root, int val) {
@@ -80,6 +99,42 @@ public class BinarySearchTree {
             }
         }
         return root;
+    }
+
+    private void printInorder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        printInorder(root.left);
+        System.out.print(root.val + ", ");
+        printInorder(root.right);
+    }
+
+    private void printReverseInorder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        printReverseInorder(root.right);
+        System.out.print(root.val + ", ");
+        printReverseInorder(root.left);
+    }
+
+    private void printPreorder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.val + ", ");
+        printPreorder(root.left);
+        printPreorder(root.right);
+    }
+
+    private void printPosorder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        printPreorder(root.left);
+        printPreorder(root.right);
+        System.out.print(root.val + ", ");
     }
 
 }
