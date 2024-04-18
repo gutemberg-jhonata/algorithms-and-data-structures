@@ -77,7 +77,7 @@ public class IntSinglyLinkedList {
         if (curr.next == null) {
             throw new Exception("empty list");
         }
-        if (curr.next.next != null) {
+        while (curr.next.next != null) {
             curr = curr.next;
         }
         int val = curr.next.val;
