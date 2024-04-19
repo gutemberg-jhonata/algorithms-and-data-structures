@@ -65,9 +65,9 @@ public class IntSinglyLinkedList2 {
         if (index < 0 || index > lenght - 1) {
             return -1;
         }
-        if (lenght == 0) {
+        /*if (lenght == 0) {
             return -1;
-        }
+        }*/
         int i = 0;
         var curr = head;
         while (i < index) {
