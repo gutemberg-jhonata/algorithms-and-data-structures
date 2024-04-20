@@ -8,11 +8,9 @@ public class IntBucketSort {
         }
         int i = 0;
         for (int n = 0; n < count.length; n++) {
-            int j = count[n];
-            while (j > 0) {
+            for (int j = 0; j < count[n]; j++) {
                 arr[i] = n;
-                i++; 
-                j--;
+                i++;
             }
         }
     }

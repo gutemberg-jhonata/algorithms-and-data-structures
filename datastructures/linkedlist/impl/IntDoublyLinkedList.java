@@ -72,7 +72,7 @@ public class IntDoublyLinkedList {
         var newNode = new ListNode(val);
         newNode.prev = curr.prev;
         newNode.next = curr;
-        curr.next.prev = newNode;
+        curr.prev.next = newNode;
         curr.prev = newNode;
         lenght++;
     }
