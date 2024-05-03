@@ -2,18 +2,6 @@ package bst;
 
 public class BinarySearchTree {
     private TreeNode root;
-    
-    private class TreeNode {
-        private int val;
-        private TreeNode left;
-        private TreeNode right;
-        
-        public TreeNode(int val) {
-            this.val = val;
-            left = null;
-            right = null;
-        }
-    }
 
     public boolean search(int target) {
         return search(root, target);
@@ -53,6 +41,10 @@ public class BinarySearchTree {
     public void printPosorder() {
         printPosorder(root);
         System.out.println();
+    }
+
+    public TreeNode getRoot() {
+        return this.root;
     }
 
     private boolean search(TreeNode root, int target) {
