@@ -33,6 +33,26 @@ public class Heap {
         int result = heap.get(1);
         heap.set(1, heap.removeLast());
         int i = 1;
+        percolateDown(i);
+        return result;
+    }
+
+    public void heapify(List<Integer> arr) {
+        arr.add(arr.get(0));
+        heap = arr;
+        int curr = (heap.size() - 1) / 2;
+        while (curr > 0) {
+            int i = curr;
+            percolateDown(i);
+            curr--;
+        }
+    }
+
+    public List<Integer> getArray() {
+        return heap;
+    }
+
+    private void percolateDown(int i) {
         while (2 * i < heap.size()) {
             if (2 * i + 1 < heap.size() && 
             heap.get(2 * i + 1) < heap.get(2 * i) && 
@@ -50,11 +70,6 @@ public class Heap {
                 break;
             }
         }
-        return result;
-    }
-
-    public List<Integer> getArray() {
-        return heap;
     }
 
 }
