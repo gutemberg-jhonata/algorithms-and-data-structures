@@ -1,4 +1,4 @@
-package bst;
+package bst.map;
 
 import java.util.ArrayList;
 import java.util.List;
