@@ -122,13 +122,12 @@ public class TreeMap {
         return root;
     }
 
-    private Integer getInorderKeys(TreeNode root, List<Integer> keys) {
+    private void getInorderKeys(TreeNode root, List<Integer> keys) {
         if (root == null) {
-            return null;
+            return;
         }
         getInorderKeys(root.left, keys);
         keys.add(root.key);
         getInorderKeys(root.right, keys);
-        return root.key;
     }
 }
