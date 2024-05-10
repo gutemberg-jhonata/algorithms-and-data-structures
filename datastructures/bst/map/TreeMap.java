@@ -89,9 +89,6 @@ public class TreeMap {
     }
 
     private TreeNode getMinTreeNode(TreeNode root) {
-        if (root == null) {
-            return null;
-        }
         TreeNode curr = root;
         while (curr != null && curr.left != null) {
             curr = curr.left;
