@@ -22,6 +22,7 @@ public class Main2 {
             adjList.get(src).add(dst);
         }
         System.out.println(AdjacencyList.dfs("A", "E", adjList, visit));
+        System.out.println(AdjacencyList.bfs("A", "E", adjList));
     }
 
 }
