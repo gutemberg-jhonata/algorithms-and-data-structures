@@ -11,7 +11,7 @@ public class BinarySearchTree {
         root = insert(root, val);
     }
 
-    public TreeNode minValueNode() {
+    public TreeNode minValueNode(TreeNode root) {
         var curr = root;
         while (curr != null && curr.left != null) {
             curr = curr.left;
@@ -85,7 +85,7 @@ public class BinarySearchTree {
             } else if (root.right == null) {
                 return root.left;
             } else {
-                var min = minValueNode();
+                var min = minValueNode(root.right);
                 root.val = min.val;
                 root.right = remove(root.right, min.val);
             }

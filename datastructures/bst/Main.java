@@ -20,6 +20,8 @@ public class Main {
         bst.printInorder();
         bst.printPreorder();
         bst.printPosorder();
+        System.out.println(bst.search(8));
+        System.out.println(bst.search(10));
     }
     
 }
