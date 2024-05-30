@@ -38,7 +38,7 @@ public class HashMap2 {
         }
         map.get(index).add(new Pair(key, value));
         size++;
-        if (size >= capacity) {
+        if (size >= capacity / 2) {
             rehash();
         }
     }
