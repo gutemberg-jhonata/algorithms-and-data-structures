@@ -1,4 +1,4 @@
-package algorithms.breathfirstsearch;
+package algorithms.breadthfirstsearch;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

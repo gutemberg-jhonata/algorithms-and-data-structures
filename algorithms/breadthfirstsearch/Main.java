@@ -1,4 +1,4 @@
-package algorithms.breathfirstsearch;
+package algorithms.breadthfirstsearch;
 
 import bst.BinarySearchTree;
 import bst.TreeNode;
